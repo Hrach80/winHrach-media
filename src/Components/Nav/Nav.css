@@ -12,6 +12,7 @@
     border-radius: 8px;
     padding: 10px 15px;
     width: 500px;
+    /* Սա հիմնական լայնությունն է մեծ էկրանների համար */
     font-family: Arial, sans-serif;
     color: #fff;
     box-shadow: 1px 0 4px 1px orangered;
@@ -310,44 +311,24 @@
     height: 20px;
     fill: var(--purple);
 }
-
-/* Responsive Media Queries */
-
-/* Ավելի լայն էկրանների համար (մինչև 1024px) */
-@media (max-width: 1024px) {
-    .winamp-container {
-        width: 450px;
-        padding: 8px 12px;
-    }
-}
-
 /* Պլանշետների համար (մինչև 768px) */
 @media (max-width: 768px) {
     .winamp-container {
-        width: 400px;
+        width: 90%;
+        margin: 20px auto;
         padding: 8px 10px;
-    }
-
-    .display-box {
-        font-size: 20px;
-        width: 120px;
-    }
-
-    .song-info {
-        width: 120px;
-    }
-
-    .volume-slider-container {
-        width: 120px;
+        gap: 10px;
     }
 }
 
-/* Մոբայլ սարքեր (մինչև 425px) */
-@media (max-width: 425px) {
+/* Մոբայլ սարքեր (մինչև 480px) */
+@media (max-width: 480px) {
     .winamp-container {
-        width: 90%;
-        margin: 20px auto;
-        padding: 10px;
+        width: 95%;
+        /* Զբաղեցնում է էկրանի լայնության 95%-ը */
+        margin: 10px auto;
+        padding: 8px;
+        gap: 8px;
     }
 
     .window-controls {
@@ -356,6 +337,7 @@
 
     .header-panel {
         justify-content: center;
+        height: 40px;
     }
 
     .logo-text {
@@ -366,13 +348,16 @@
     .middle-panel,
     .bottom-panel {
         flex-direction: column;
+        /* Բաղադրիչները դասավորում է մեկը մյուսի տակ */
         align-items: center;
+        width: 100%;
         gap: 10px;
     }
 
     .display-box {
         width: 100%;
-        font-size: 18px;
+        /* Լայնությունը դարձնում է 100% */
+        font-size: 16px;
         height: 50px;
         justify-content: center;
         padding: 8px;
@@ -380,6 +365,7 @@
 
     .visualizer-box {
         width: 100%;
+        /* Լայնությունը դարձնում է 100% */
         height: 30px;
     }
 
@@ -387,30 +373,19 @@
         width: 100%;
         text-align: center;
         padding: 5px;
+        font-size: 14px;
     }
 
-    .progress-bar-container {
-        width: 100%;
-    }
-
+    .progress-bar-container,
     .volume-slider-container {
         width: 100%;
     }
 
-    .mode-indicators {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .playback-controls {
-        width: 100%;
-        justify-content: space-around;
-        gap: 0;
-    }
-
+    .playback-controls,
     .eject-controls {
         width: 100%;
         justify-content: space-around;
+        /* Հավասարաչափ բաշխում տարրերը */
         gap: 0;
     }
 
@@ -420,109 +395,52 @@
     }
 
     .nav-button svg {
-        width: 25px;
-        height: 25px;
-    }
-
-    .eq-button,
-    .pl-button,
-    .shuffle-button,
-    .repeat-button {
-        min-width: 50px;
-        height: 35px;
-        font-size: 9px;
-    }
-}
-
-/* Մոբայլ սարքեր (մինչև 375px) */
-@media (max-width: 376px) {
-.winamp-container {
-        padding: 10px;
-    }
-
-    .logo-text {
-        font-size: 30px;
-        
-    }
-
-    .display-box {
-        font-size: 20px;
-        padding: 6px;
-    }
-
-    .visualizer-box {
-        height: 100px;
-    }
-
-    .song-info {
-        font-size: 16px;
-        gap: 20px;
-    }
-
-    .nav-button {
-        width: 60px;
-        height: 60px;
-    }
-
-    .nav-button svg {
         width: 20px;
         height: 20px;
-        
     }
 
     .eq-button,
     .pl-button,
     .shuffle-button,
     .repeat-button {
-        min-width: 40px;
-        height: 58px;
-        font-size: 16px;
-
+        min-width: 45px;
+        height: 30px;
+        font-size: 8px;
     }
 }
 
-/* Մոբայլ սարքեր (մինչև 320px) */
+/* Շատ փոքր սարքեր (մինչև 320px) */
 @media (max-width: 320px) {
     .winamp-container {
-        padding: 10px;
+        width: 98%;
+        padding: 5px;
     }
 
     .logo-text {
-        font-size: 20px;
-        color: blue;
+        font-size: 14px;
     }
 
     .display-box {
-        font-size: 18px;
-        padding: 10px;
-    }
-
-    .visualizer-box {
-        height: 100px;
-    }
-
-    .song-info {
-        font-size: 16px;
-        gap: 20px;
+        font-size: 14px;
+        height: 40px;
     }
 
     .nav-button {
-        width: 60px;
-        height: 60px;
+        width: 35px;
+        height: 35px;
     }
 
     .nav-button svg {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
     }
 
     .eq-button,
     .pl-button,
     .shuffle-button,
     .repeat-button {
-        min-width: 40px;
-        height: 58px;
-        font-size: 16px;
-
+        min-width: 35px;
+        height: 25px;
+        font-size: 7px;
     }
 }
