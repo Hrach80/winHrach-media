@@ -435,18 +435,19 @@
 }
 
 /* Մոբայլ սարքեր (մինչև 375px) */
-@media (max-width: 375px) {
+@media (max-width: 376px) {
 .winamp-container {
         padding: 10px;
     }
 
     .logo-text {
-        font-size: 20px;
+        font-size: 30px;
+        
     }
 
     .display-box {
-        font-size: 18px;
-        padding: 10px;
+        font-size: 20px;
+        padding: 6px;
     }
 
     .visualizer-box {
@@ -466,6 +467,7 @@
     .nav-button svg {
         width: 20px;
         height: 20px;
+        
     }
 
     .eq-button,
