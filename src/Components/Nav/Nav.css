@@ -311,61 +311,69 @@
     height: 20px;
     fill: var(--purple);
 }
+
+/* Responsive Media Queries */
+
 /* Պլանշետների համար (մինչև 768px) */
 @media (max-width: 768px) {
     .winamp-container {
-        width: 90%;
-        margin: 20px auto;
+        width: 400px;
         padding: 8px 10px;
-        gap: 10px;
+    }
+
+    .display-box {
+        font-size: 20px;
+        width: 120px;
+    }
+
+    .song-info {
+        width: 120px;
+    }
+
+    .volume-slider-container {
+        width: 120px;
     }
 }
 
-/* Մոբայլ սարքեր (մինչև 480px) */
-@media (max-width: 480px) {
+/* Մոբայլ սարքեր (մինչև 425px) */
+@media (max-width: 425px) {
     .winamp-container {
-        width: 95%;
-        /* Զբաղեցնում է էկրանի լայնության 95%-ը */
-        margin: 10px auto;
-        padding: 8px;
-        gap: 8px;
+        width: 330px;
+        height: 500px;
+        margin: 20px auto;
+        padding: 10px;
+        gap: 10px;
+        /* Ավելացված է բաղադրիչների միջև տարածություն ստեղծելու համար */
+    }
+
+    .header-panel {
+        justify-content: center;
     }
 
     .window-controls {
         display: none;
     }
 
-    .header-panel {
-        justify-content: center;
-        height: 40px;
-    }
-
-    .logo-text {
-        font-size: 16px;
-    }
-
     .top-panel,
     .middle-panel,
     .bottom-panel {
         flex-direction: column;
-        /* Բաղադրիչները դասավորում է մեկը մյուսի տակ */
         align-items: center;
         width: 100%;
+        /* Ապահովում է, որ բլոկները զբաղեցնեն ամբողջ լայնությունը */
         gap: 10px;
     }
 
     .display-box {
         width: 100%;
-        /* Լայնությունը դարձնում է 100% */
-        font-size: 16px;
-        height: 50px;
+        font-size: 18px;
         justify-content: center;
         padding: 8px;
+        height: auto;
     }
 
     .visualizer-box {
         width: 100%;
-        /* Լայնությունը դարձնում է 100% */
         height: 30px;
     }
 
@@ -373,25 +381,79 @@
         width: 100%;
         text-align: center;
         padding: 5px;
-        font-size: 14px;
     }
 
     .progress-bar-container,
-    .volume-slider-container {
-        width: 100%;
-    }
-
+    .volume-slider-container,
+    .mode-indicators,
     .playback-controls,
     .eject-controls {
         width: 100%;
         justify-content: space-around;
-        /* Հավասարաչափ բաշխում տարրերը */
+        /* Բոլոր տարրերը հավասարաչափ բաշխելու համար */
         gap: 0;
     }
 
     .nav-button {
         width: 40px;
         height: 40px;
+    }
+
+    .nav-button svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .eq-button,
+    .pl-button,
+    .shuffle-button,
+    .repeat-button {
+        min-width: 50px;
+        height: 35px;
+        font-size: 9px;
+    }
+}
+
+/* Մոբայլ սարքեր (մինչև 375px) */
+@media (max-width: 375px) {
+.winamp-container {
+        width: 340px;
+        height: 500px;
+        padding: 8px;
+    }
+
+    .logo-text {
+        font-size: 16px;
+        /* Կարգավորված է ավելի փոքր չափի */
+    }
+
+    .visualizer-box {
+        font-size: 18px;
+        width: 290px;
+        height: 80px;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    .visualizer-bar {
+        padding: 3px;
+
+    }
+
+    .display-box {
+        font-size: 20px;
+        width: 290px;
+        height: 50px;
+        padding: 5px;
+    }
+
+    .middle-panel {
+        margin-bottom: 20px;
+    }
+
+    .nav-button {
+        width: 55px;
+        height: 55px;
     }
 
     .nav-button svg {
@@ -403,44 +465,66 @@
     .pl-button,
     .shuffle-button,
     .repeat-button {
-        min-width: 45px;
-        height: 30px;
-        font-size: 8px;
+        min-width: 40px;
+        height: 50px;
+        font-size: 16px;
+        /* Կարգավորված է ավելի փոքր չափի */
     }
 }
 
-/* Շատ փոքր սարքեր (մինչև 320px) */
+/* Մոբայլ սարքեր (մինչև 320px) */
 @media (max-width: 320px) {
     .winamp-container {
-        width: 98%;
-        padding: 5px;
+        width: 290px;
+        height: 500px;
+        padding: 8px;
     }
 
     .logo-text {
-        font-size: 14px;
+        font-size: 16px;
+        /* Կարգավորված է ավելի փոքր չափի */
+    }
+
+    .visualizer-box {
+        font-size: 18px;
+        width: 290px;
+        height: 80px;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    .visualizer-bar{
+        padding: 3px;
+        
     }
 
     .display-box {
-        font-size: 14px;
-        height: 40px;
+        font-size: 20px;
+        width: 290px;
+        height: 50px;
+        padding: 5px;
+    }
+
+    .middle-panel {
+        margin-bottom: 20px;
     }
 
     .nav-button {
-        width: 35px;
-        height: 35px;
+        width: 55px;
+        height: 55px;
     }
 
     .nav-button svg {
-        width: 18px;
-        height: 18px;
+        width: 20px;
+        height: 20px;
     }
 
     .eq-button,
     .pl-button,
     .shuffle-button,
     .repeat-button {
-        min-width: 35px;
-        height: 25px;
-        font-size: 7px;
+        min-width: 40px;
+        height: 50px;
+        font-size: 16px;
+        /* Կարգավորված է ավելի փոքր չափի */
     }
 }
