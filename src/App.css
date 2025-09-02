@@ -1,0 +1,8 @@
+body {
+    background-color: rgb(44, 47, 49);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    min-height: 100vh;
+    margin: 0;
+}
