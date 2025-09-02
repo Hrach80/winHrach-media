@@ -1,3 +1,4 @@
+/* Հիմնական ոճերը, որոնք կիրառվում են բոլոր էկրանների համար */
 :root {
     --main-bg-color: #212529;
     --light-shadow: #3b3e42;
@@ -12,7 +13,6 @@
     border-radius: 8px;
     padding: 10px 15px;
     width: 500px;
-    /* Սա հիմնական լայնությունն է մեծ էկրանների համար */
     font-family: Arial, sans-serif;
     color: #fff;
     box-shadow: 1px 0 4px 1px orangered;
@@ -20,9 +20,11 @@
     flex-direction: column;
     gap: 15px;
     user-select: none;
-    margin-top: 20px;
+    margin: 20px auto;
+    /* Կենտրոնացնում է մեծ էկրանների համար */
 }
 
+/* Header, display, visualizer և այլ բլոկների հիմնական ոճերը */
 .header-panel {
     display: flex;
     justify-content: space-between;
@@ -113,8 +115,8 @@
     background-color: #f7931a;
     border-radius: 1px;
     transition: height 0.1s ease-out;
+    padding: 2px;
 }
-
 
 .song-info {
     font-size: 14px;
@@ -335,23 +337,29 @@
     }
 }
 
-/* Մոբայլ սարքեր (մինչև 425px) */
-@media (max-width: 425px) {
+/* Մոբայլ սարքեր (մինչև 480px) */
+@media (max-width: 480px) {
     .winamp-container {
-        width: 330px;
-        height: 500px;
-        margin: 20px auto;
-        padding: 10px;
-        gap: 10px;
-        /* Ավելացված է բաղադրիչների միջև տարածություն ստեղծելու համար */
-    }
-
-    .header-panel {
-        justify-content: center;
+        width: 95%;
+        /* Լայնությունը դարձնում ենք հարաբերական */
+        height: auto;
+        /* Բարձրությունը դարձնում ենք ավտոմատ */
+        margin: 10px auto;
+        padding: 8px;
+        gap: 8px;
     }
 
     .window-controls {
         display: none;
+    }
+
+    .header-panel {
+        justify-content: center;
+        height: 40px;
+    }
+
+    .logo-text {
+        font-size: 16px;
     }
 
     .top-panel,
@@ -360,16 +368,15 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
-        /* Ապահովում է, որ բլոկները զբաղեցնեն ամբողջ լայնությունը */
         gap: 10px;
     }
 
     .display-box {
         width: 100%;
-        font-size: 18px;
+        font-size: 16px;
+        height: 50px;
         justify-content: center;
         padding: 8px;
-        height: auto;
     }
 
     .visualizer-box {
@@ -381,16 +388,18 @@
         width: 100%;
         text-align: center;
         padding: 5px;
+        font-size: 14px;
     }
 
     .progress-bar-container,
-    .volume-slider-container,
-    .mode-indicators,
+    .volume-slider-container {
+        width: 100%;
+    }
+
     .playback-controls,
     .eject-controls {
         width: 100%;
         justify-content: space-around;
-        /* Բոլոր տարրերը հավասարաչափ բաշխելու համար */
         gap: 0;
     }
 
@@ -400,63 +409,6 @@
     }
 
     .nav-button svg {
-        width: 25px;
-        height: 25px;
-    }
-
-    .eq-button,
-    .pl-button,
-    .shuffle-button,
-    .repeat-button {
-        min-width: 50px;
-        height: 35px;
-        font-size: 9px;
-    }
-}
-
-/* Մոբայլ սարքեր (մինչև 375px) */
-@media (max-width: 375px) {
-.winamp-container {
-        width: 340px;
-        height: 500px;
-        padding: 8px;
-    }
-
-    .logo-text {
-        font-size: 16px;
-        /* Կարգավորված է ավելի փոքր չափի */
-    }
-
-    .visualizer-box {
-        font-size: 18px;
-        width: 290px;
-        height: 80px;
-        padding: 5px;
-        margin-bottom: 10px;
-    }
-
-    .visualizer-bar {
-        padding: 3px;
-
-    }
-
-    .display-box {
-        font-size: 20px;
-        width: 290px;
-        height: 50px;
-        padding: 5px;
-    }
-
-    .middle-panel {
-        margin-bottom: 20px;
-    }
-
-    .nav-button {
-        width: 55px;
-        height: 55px;
-    }
-
-    .nav-button svg {
         width: 20px;
         height: 20px;
     }
@@ -465,66 +417,67 @@
     .pl-button,
     .shuffle-button,
     .repeat-button {
-        min-width: 40px;
-        height: 50px;
-        font-size: 16px;
-        /* Կարգավորված է ավելի փոքր չափի */
+        min-width: 45px;
+        height: 30px;
+        font-size: 8px;
     }
 }
 
-/* Մոբայլ սարքեր (մինչև 320px) */
-@media (max-width: 320px) {
-    .winamp-container {
-        width: 290px;
-        height: 500px;
-        padding: 8px;
-    }
 
-    .logo-text {
-        font-size: 16px;
-        /* Կարգավորված է ավելի փոքր չափի */
-    }
 
-    .visualizer-box {
-        font-size: 18px;
-        width: 290px;
-        height: 80px;
-        padding: 5px;
-        margin-bottom: 10px;
-    }
-    .visualizer-bar{
-        padding: 3px;
-        
-    }
 
-    .display-box {
-        font-size: 20px;
-        width: 290px;
-        height: 50px;
-        padding: 5px;
-    }
+    @media (max-width: 320px) {
+        .winamp-container {
+            width: 290px;
+            height: 540px;
+            padding: 8px;
+        }
 
-    .middle-panel {
-        margin-bottom: 20px;
-    }
+        .logo-text {
+            font-size: 16px;
+            /* Կարգավորված է ավելի փոքր չափի */
+        }
 
-    .nav-button {
-        width: 55px;
-        height: 55px;
-    }
+        .visualizer-box {
+            font-size: 18px;
+            width: 290px;
+            height: 90px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
 
-    .nav-button svg {
-        width: 20px;
-        height: 20px;
-    }
+        .visualizer-bar {
+            padding: 3px;
 
-    .eq-button,
-    .pl-button,
-    .shuffle-button,
-    .repeat-button {
-        min-width: 40px;
-        height: 50px;
-        font-size: 16px;
-        /* Կարգավորված է ավելի փոքր չափի */
+        }
+
+        .display-box {
+            font-size: 20px;
+            width: 290px;
+            height: 60px;
+            padding: 5px;
+        }
+
+        .middle-panel {
+            margin-bottom: 30px;
+        }
+
+        .nav-button {
+            width: 55px;
+            height: 55px;
+        }
+
+        .nav-button svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .eq-button,
+        .pl-button,
+        .shuffle-button,
+        .repeat-button {
+            min-width: 40px;
+            height: 50px;
+            font-size: 16px;
+        }
     }
-}

@@ -79,7 +79,7 @@ export const Nav = () => {
                             className="volume-slider"
                         />
                     </div>
-                    <span className="stereo active">stereo</span>
+                    <span className="stereo active">VOLUME</span>
                 </div>
             </div>
             <div className="bottom-panel">
