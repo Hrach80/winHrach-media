@@ -426,58 +426,63 @@
 
 
 
-    @media (max-width: 375px) {
-        .winamp-container {
-            width: 335px;
-            height: 600px;
-            padding: 8px;
-        }
-
-        .logo-text {
-            font-size: 20px;
-            /* Կարգավորված է ավելի փոքր չափի */
-        }
-
-        .visualizer-box {
-            font-size: 18px;
-            width: 290px;
-            height: 140px;
-            padding: 5px;
-            margin-bottom: 10px;
-        }
-
-        .visualizer-bar {
-            padding: 3px;
-
-        }
-
-        .display-box {
-            font-size: 20px;
-            width: 290px;
-            height: 60px;
-            padding: 5px;
-        }
-
-        .middle-panel {
-            margin-bottom: 30px;
-        }
-
-        .nav-button {
-            width: 65px;
-            height: 65px;
-        }
-
-        .nav-button svg {
-            width: 20px;
-            height: 20px;
-        }
-
-        .eq-button,
-        .pl-button,
-        .shuffle-button,
-        .repeat-button {
-            min-width: 40px;
-            height: 60px;
-            font-size: 16px;
-        }
+@media (max-width: 375px) {
+    .winamp-container {
+        width: 335px;
+        height: 600px;
+        padding: 8px;
     }
+
+    .logo-text {
+        font-size: 20px;
+        /* Կարգավորված է ավելի փոքր չափի */
+    }
+
+    .mode-indicators {
+        display: none;
+    }
+
+    .visualizer-box {
+        font-size: 18px;
+        width: 330px;
+        height: 140px;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    .visualizer-bar {
+        padding: 4px;
+
+    }
+
+
+    .display-box {
+        font-size: 20px;
+        width: 330px;
+        height: 60px;
+        padding: 5px;
+    }
+
+    .middle-panel {
+        margin-bottom: 30px;
+    }
+
+    .nav-button {
+        width: 65px;
+        height: 65px;
+    }
+
+    .nav-button svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .eq-button,
+    .pl-button,
+    .shuffle-button,
+    .repeat-button {
+        min-width: 40px;
+        height: 60px;
+        font-size: 16px;
+    }
+}
