@@ -436,29 +436,31 @@
 
 /* Մոբայլ սարքեր (մինչև 375px) */
 @media (max-width: 375px) {
-    .winamp-container {
-        padding: 8px;
+.winamp-container {
+        padding: 10px;
     }
 
     .logo-text {
-        font-size: 14px;
+        font-size: 20px;
     }
 
     .display-box {
-        font-size: 16px;
+        font-size: 18px;
+        padding: 10px;
     }
 
     .visualizer-box {
-        height: 25px;
+        height: 100px;
     }
 
     .song-info {
-        font-size: 12px;
+        font-size: 16px;
+        gap: 20px;
     }
 
     .nav-button {
-        width: 35px;
-        height: 35px;
+        width: 60px;
+        height: 60px;
     }
 
     .nav-button svg {
@@ -470,9 +472,10 @@
     .pl-button,
     .shuffle-button,
     .repeat-button {
-        min-width: 45px;
-        height: 30px;
-        font-size: 8px;
+        min-width: 40px;
+        height: 58px;
+        font-size: 16px;
+
     }
 }
 
