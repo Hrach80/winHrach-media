@@ -1,5 +1,3 @@
-// src/components/usePlayerState.js
-
 import { useState, useRef, useEffect, useCallback } from 'react';
 
 export const usePlayerState = () => {
@@ -115,14 +113,22 @@ export const usePlayerState = () => {
 
             return () => URL.revokeObjectURL(songUrl);
         }
-    }, [state.currentSongIndex, state.songsList, setupAudioApi]); // removed state.volume from dependency array
+    }, [state.currentSongIndex, state.songsList, setupAudioApi]);
 
     const handleFilesChange = (e) => {
-        const files = Array.from(e.target.files).filter(file => file.name.toLowerCase().endsWith('.mp3'));
-        if (files.length > 0) {
-            setState(prev => ({ ...prev, songsList: files, currentSongIndex: 0 }));
+        const newFiles = Array.from(e.target.files).filter(file => file.name.toLowerCase().endsWith('.mp3'));
+        if (newFiles.length > 0) {
+            setState(prev => {
+                const updatedSongsList = [...prev.songsList, ...newFiles];
+                // Սկսում ենք նվագարկել առաջին նոր ավելացված երգը, եթե երգացանկը նախկինում դատարկ է եղել։
+                const newCurrentIndex = prev.currentSongIndex === -1 ? 0 : prev.currentSongIndex;
+                return {
+                    ...prev,
+                    songsList: updatedSongsList,
+                    currentSongIndex: newCurrentIndex,
+                };
+            });
         } else {
-            setState(prev => ({ ...prev, songsList: [], currentSongIndex: -1, isPlaying: false }));
             alert("Ընտրված ֆայլերի մեջ MP3 ֆայլեր չկան։");
         }
     };
